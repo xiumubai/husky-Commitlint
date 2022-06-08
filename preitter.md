@@ -1,3 +1,11 @@
+<!--
+ * @Author: 朽木白
+ * @Date: 2022-06-08 15:51:08
+ * @LastEditors: 1547702880@qq.com
+ * @LastEditTime: 2022-06-08 16:26:30
+ * @Description:
+-->
+
 # preitter + eslint
 
 ## preitter
@@ -39,3 +47,41 @@ IDE 中安装 Prettier-Code Formater[4] 插件：
 `const test = "test";`
 
 现在当我们 Ctrl + S 保存代码时，插件就会帮助我们自动格式化了
+
+## 代码规范之 JS/TS 规范
+
+1. 安装依赖
+
+```
+npm install eslint --save-dev
+// or
+yarn add eslint --dev
+```
+
+## 代码规范之 JS/TS 规范
+
+1. 安装依赖
+
+```
+npm install eslint --save-dev
+// or
+yarn add eslint --dev
+```
+
+2. 生成配置文件
+
+```
+npm init @eslint/config
+// or
+yarn create @eslint/config
+```
+
+3. 配置命令
+
+有了具体的规范后，我们同样需要使用工具去约束：还是通过在 git commit 阶段校验，若不通过则取消提交。
+
+```
+ "lint-staged": {
+    "src/*": "eslint --ext .js,.ts,.tsx"
+  },
+```
