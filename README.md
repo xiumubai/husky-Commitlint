@@ -50,3 +50,9 @@ husky - pre-commit hook exited with code 1 (error)
 ## commitlint 安装与配置
 
 `npm i @commitlint/cli @commitlint/config-conventional -D`
+
+到目前为止我们还没有配置 `npm run lint` 这个命令，所以 commit 的时候回报错
+
+在 pre-commit 文件中把`npm run lint`注释了就可以了。
+
+现在我们按照 commit 的规范来提交，就可以成功的提交代码了
